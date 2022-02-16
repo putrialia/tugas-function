@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <p>Masukan Nilai :</p>
+    <input type="text" placeholder="nilai" id="nilai">
+    <br><br>
+    <button onclick="submit()">submit</button>
+
+    <script>
+           function submit(){
+             var nilai = document.getElementById("nilai").value;
+    
+              if (nilai <= 100 && nilai >= 90){
+                  document.write("nilai : A");
+              }
+              else if(nilai <= 80 && nilai >=89 ){
+                  document.write("nilai  : B");
+              }
+              else if (nilai >= 79 && nilai <=60 ){
+                  document.write("nilai : C");
+              }
+              else if (nilai >= 59 && nilai <=40 ){
+                  document.write("nilai : D");    
+              }
+              else if (nilai >= 0 && nilai <=39 ){
+                  document.write("nilai : E");
+              }
+               else{
+                   alert("tidak bisa input selain angka diatas");
+               }
+            } 
+
+    </script>
+    </center>
+</body>
+</html

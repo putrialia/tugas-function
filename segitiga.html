@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Menghitung luas dan keliling segitiga</h1>
+    <form>
+        <p>alas : <input type="text" id="alas"></p>
+        <p>tinggi : <input type="text" id="tinggi"></p>
+        <p><input type="button" value="hitung" onclick="hitung();"></p>
+        <p>luas : <input type="text" id="luas"></p>
+        <p>keliling : <input type="text" id="keliling"></p>
+    </form>
+
+<script>
+    var luas;
+var keliling;
+var alas;
+var tinggi;
+var sisiMiring;
+function hitung() {
+	alas = parseFloat(document.getElementById("alas").value);
+	tinggi = parseFloat(document.getElementById("tinggi").value);
+	luas = (alas * tinggi) / 2;
+	sisiMiring = Math.sqrt(Math.pow(alas,2)+Math.pow(tinggi,2));
+	keliling = alas + sisiMiring + sisiMiring;
+	document.getElementById('luas').value = luas;
+	document.getElementById('keliling').value = keliling;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Menghitung luas dan keliling lingkaran</h1>
+    <form>
+        <p>luas : <input type="text" id="r"></p>
+        <p>keliling : <input type="text" id="d"></p>
+        <p><input type="button" value="hitung" onclick="hitung();"></p>
+        <p>luas : <input type="text" id="luas"></p>
+        <p>keliling : <input type="text" id="keliling"></p>
+    </form>
+</body>
+
+<script>
+const phi = 3.14;
+var luas;
+var keliling;
+var r;
+var d;
+function hitung() {
+	r = parseFloat(document.getElementById("r").value);
+	luas = phi * Math.pow(r,2);
+	d = 2 * r;
+	keliling = phi * d;
+	document.getElementById('luas').value = luas;
+	document.getElementById('keliling').value = keliling;
+}
+</script>
+</body>
+</html>
